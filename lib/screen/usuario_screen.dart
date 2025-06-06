@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 
 class UsuarioScreen extends StatelessWidget {
   const UsuarioScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Finanza personal",
           style: TextStyle(
             color: Colors.black87,
@@ -14,14 +15,12 @@ class UsuarioScreen extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        backgroundColor: Colors.white,
       ),
       backgroundColor: const Color(0xFFE0F7FA),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
             margin: const EdgeInsets.all(15),
-
             child: Column(
               children: [
                 Row(
@@ -32,16 +31,13 @@ class UsuarioScreen extends StatelessWidget {
                         children: const [
                           SizedBox(height: 5),
                           Text(
-                            "Alex Sullon",
+                            "Ruth Timo",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 18,
                             ),
                           ),
-                          Text(
-                            "@dsullon",
-                            style: TextStyle(color: Colors.grey),
-                          ),
+                          Text("@rTimo", style: TextStyle(color: Colors.grey)),
                           SizedBox(height: 20),
                           Text("Saldo Actual", style: TextStyle(fontSize: 16)),
                           Text(
@@ -55,16 +51,13 @@ class UsuarioScreen extends StatelessWidget {
                         ],
                       ),
                     ),
+                    const CircleAvatar(
+                      radius: 40,
+                      backgroundColor: Colors.grey,
+                      child: Icon(Icons.person, size: 50, color: Colors.white),
+                    ),
                   ],
                 ),
-                Expanded(
-                  child: CircleAvatar(
-                    radius: 40,
-                    backgroundColor: Colors.grey,
-                    child: Icon(Icons.person, size: 50, color: Colors.white),
-                  ),
-                ),
-
                 const SizedBox(height: 20),
                 const Align(
                   alignment: Alignment.centerLeft,
